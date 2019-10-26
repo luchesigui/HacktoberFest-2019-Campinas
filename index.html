@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+  <title>HacktoberFest 2019 - Campinas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #152347;
+      background-image: url('./hacktober-bg-top.png');
+      background-position: top left;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      font-family: 'Space Mono', monospace;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    img {
+      max-width: 300px;
+    }
+
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 60px;
+    }
+
+    .card {
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transform: perspective(1000px);
+      transition: transform .2s;
+      will-change: transform;
+      padding: 50px 0;
+      margin-bottom: 20px;
+    }
+
+    .card:hover {
+      transform: perspective(1000px) scale3d(1.02, 1.02, 1.02);
+    }
+
+    .card:nth-child(4n+1) {
+      background: linear-gradient(76.04deg, #febd3b -0.33%, #ff9353 100.08%);
+    }
+
+    .card:nth-child(4n+2) {
+      background: linear-gradient(76.04deg, #ff8c57 -0.33%, #ff646f 100.08%);
+    }
+
+    .card:nth-child(4n+3) {
+      background: linear-gradient(76.04deg, #ff5d73 -0.33%, #ff358b 100.08%);
+    }
+
+    .card:nth-child(4n+4) {
+      background: linear-gradient(76.04deg, #ff2e90 -0.33%, #ff06a6 100.08%);
+    }
+
+    @media (min-width: 667px) {
+      .card-wrapper {
+        flex-direction: row;
+      }
+
+      .card {
+        margin: 0 10px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      img {
+        max-width: unset;
+      }
+    }
+
+    @media (min-width: 1366px) {
+      main {
+        flex-direction: row;
+      }
+
+      .card-wrapper {
+        padding-left: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <img data-tilt src="./hacktoberfest-logo.svg" alt="HacktoberFest 2019 - Campinas">
+
+    <section class="card-wrapper">
+      <a href="https://www.twitch.tv/victor_perin" target="_blank" class="card">
+        Live
+      </a>
+      <a href="https://discord.gg/vyfMwFD" target="_blank" class="card">
+        Discord
+      </a>
+    </section>
+  </main>
+  <script>
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const tiltDisallowed = ['bluetooth', 'cellular', 'ethernet'];
+
+    if (!tiltDisallowed.includes(connection.type)) {
+      const script = document.createElement('script');
+      script.src = 'https://micku7zu.github.io/vanilla-tilt.js/src/vanilla-tilt.min.js';
+      document.head.appendChild(script);
+    }
+  </script>
+</body>
+
+</html>
