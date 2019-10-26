@@ -2,4 +2,4 @@
 
 Visite: [HacktoberFest 2019 Campinas](https://guiluchesi.github.io/HacktoberFest-2019-Campinas/)
 
-![Screenshot](site-screeshot.png)
+![Screenshot](site-screenshot.png)
